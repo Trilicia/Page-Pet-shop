@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding-top: 100px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color:  #faf7f5;
   color: #1a1a1a;
 }
@@ -166,6 +166,46 @@ section {
   line-height: 1.6;
 }
 
+.indicadores {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.indicador-card {
+  flex: 1;
+  min-width: 150px;
+
+  background: #ffffff;
+  border: 2px solid #d4af37;
+
+  border-radius: 15px;
+  padding: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.indicador-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.numero {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.indicador-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
 
 /* PROJETOS */
 .card {
@@ -285,7 +325,7 @@ article {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* importante pro mobile */
+  flex-wrap: wrap; 
 }
 
 .card-servico {
@@ -306,8 +346,10 @@ article {
 .card-servico:hover {
   transform: translateY(-5px);
 }
-
-/* títulos */
+.card-servico {
+  aspect-ratio: 1 / 1;
+}
+/*letras dentro da seção serviço*/
 .card-servico h3 {
   margin-top: 0;
   text-align: center
