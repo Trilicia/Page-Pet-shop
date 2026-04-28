@@ -1,0 +1,44 @@
+
+const form = document.querySelector("form");
+
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // impede envio padrão
+
+  
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const telefone = document.getElementById("telefone").value.trim();
+  const mensagem = document.getElementById("mensagem").value.trim();
+
+
+  if (nome.length < 3) {
+    alert("O nome deve ter pelo menos 3 caracteres.");
+    return;
+  }
+
+  if (!validarEmail(email)) {
+    alert("Digite um e-mail válido.");
+    return;
+  }
+
+  if (telefone.length < 8) {
+    alert("Digite um telefone válido.");
+    return;
+  }
+
+  if (mensagem.length < 10) {
+    alert("A mensagem deve ter pelo menos 10 caracteres.");
+    return;
+  }
+
+    alert("Mensagem enviada com sucesso! 🐾");
+
+  
+  form.reset();
+});
+
+function validarEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
